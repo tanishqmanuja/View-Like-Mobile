@@ -1,0 +1,16 @@
+<div class="main-container">
+
+	<div class="header">
+		<div class="title">{{title || "View Like Mobile" |titlecase}}</div>
+		<div class="url">Site url: {{url || "N/A"}}</div>
+	</div>
+
+	<div class="phone-container">
+		<div class="phone">
+			<iframe [src]="(url | safeUrl)" frameborder="0"></iframe>
+		</div>
+	</div>
+
+	<div class="footer">View-Like-Mobile developed by @tanishqmanuja</div>
+
+</div>
