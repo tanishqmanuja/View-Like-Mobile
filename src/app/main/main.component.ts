@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MainComponent implements OnInit {
   title = '';
   url = '';
+  bg = '';
 
   constructor(private activedRoute: ActivatedRoute) {}
 
@@ -16,6 +17,7 @@ export class MainComponent implements OnInit {
     this.activedRoute.queryParams.subscribe((params) => {
       this.title = params['title'];
       this.url = params['url'] || 'https://www.example.com/';
+      this.bg = params['bg'] || `#${params['bghex']}` || 'white';
     });
   }
 }
